@@ -53,7 +53,8 @@
             font-weight: bold;
         }
         input[type="text"],
-        input[type="email"] {
+        input[type="email"],
+        input[type="file"] {
             padding: 10px;
             margin-bottom: 12px;
             border: 1px solid #ddd;
@@ -70,6 +71,12 @@
         button:hover {
             background-color: #0056b3;
         }
+        .img-thumbnail {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
@@ -83,6 +90,9 @@
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" required>
 
+            <label for="photo">Foto de Perfil:</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+
             <button type="submit">Cadastrar</button>
         </form>
 
@@ -93,6 +103,7 @@
                     <th>ID</th>
                     <th>Nome</th>
                     <th>E-mail</th>
+                    <th>Foto</th>
                 </tr>
             </thead>
             <tbody>
@@ -100,11 +111,13 @@
                     <td>1</td>
                     <td>José Santos</td>
                     <td>jose@teste.com</td>
+                    <td><img src="https://via.placeholder.com/50" alt="José Santos" class="img-thumbnail"></td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>Maria Oliveira</td>
                     <td>maria.oliveira@teste.com</td>
+                    <td><img src="https://via.placeholder.com/50" alt="Maria Oliveira" class="img-thumbnail"></td>
                 </tr>
             </tbody>
         </table>
